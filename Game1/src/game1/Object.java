@@ -1,6 +1,8 @@
 
 package game1;
 
+import javalib.worldimages.Posn;
+
 public interface Object {
     
     Posn getPosn();
