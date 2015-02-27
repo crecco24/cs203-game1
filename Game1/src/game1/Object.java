@@ -11,4 +11,8 @@ public interface Object {
     
     Boolean equalType(Ball b);
     
+    Boolean touching(Ball b);
+    
+    Ball move(Posn p);
+    
 }
