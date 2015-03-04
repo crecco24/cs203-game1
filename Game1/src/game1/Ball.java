@@ -4,20 +4,21 @@ import java.awt.Color;
 import java.util.Random;
 import javalib.funworld.World;
 import javalib.worldimages.*;
+import java.util.List;
 
 public class Ball extends World implements Object {
 
     Posn position;
     int type;
     boolean inPlay;
-    int radius = 20;
-    public CircleImage circ;
+    int radius = 25;
+    public DiskImage circ;
 
     Ball(Posn position, int type, Boolean inPlay) {
         this.position = position;
         this.type = type;
         this.inPlay = inPlay;
-        this.circ = new CircleImage(new Posn(400, 400), this.radius, randColor(randInt()));
+        this.circ = new DiskImage(position, this.radius, randColor(randInt()));
     }
 
     public Posn getPosn() {
@@ -85,5 +86,7 @@ public class Ball extends World implements Object {
     public WorldImage makeImage() {
         return this.circ;
     }
+    
+
 
 }
